@@ -13,7 +13,7 @@ class MainTestCase(TestCase):
     def test_pprint(self):
         buffer = StringIO()
         pprint('test', out=buffer)
-        self.assertEquals('test', buffer.getvalue())
+        self.assertEqual('test', buffer.getvalue())
 
     def test_true(self):
         value = True
