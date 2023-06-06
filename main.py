@@ -1,6 +1,7 @@
 import sys
 
 
+# Some example comment
 def pprint(msg, out=sys.stdout):
     out.write(msg)
 
