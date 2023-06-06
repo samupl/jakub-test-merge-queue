@@ -1,0 +1,23 @@
+version: 1
+
+merge:
+  trigger:
+    auto_merge: true
+
+ignore:
+  labels: ["do not merge"]
+
+
+method: squash
+
+options:
+  squash:
+    title: "pull_request_title"
+    body: summarize_commits
+
+required_statuses:
+  - "build""
+
+update:
+  trigger:
+    auto_merge: true
