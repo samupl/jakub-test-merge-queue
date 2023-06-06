@@ -15,6 +15,6 @@ class MainTestCase(TestCase):
         pprint('test', out=buffer)
         self.assertEqual('test', buffer.getvalue())
 
-    def test_example_true(self):
+    def test_example_true1(self):
         value = True
         self.assertTrue(True)
