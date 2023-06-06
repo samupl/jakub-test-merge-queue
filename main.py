@@ -1,7 +1,7 @@
 import sys
 
 
-# Some example comment
+# Some example comment 2
 def pprint(msg, out=sys.stdout):
     out.write(msg)
 
