@@ -1,1 +1,1 @@
-# Test autoupdate (demo Lukasz)
+# Test autoupdate (demo of somebody accidentally updating master in the meantime)
