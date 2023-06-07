@@ -1,1 +1,1 @@
-# Test autoupdate (demo lukasz)
+# Test autoupdate (demo Lukasz)
