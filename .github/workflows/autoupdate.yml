@@ -1,0 +1,22 @@
+name: autoupdate
+
+on:
+  push: {}
+
+jobs:
+  autoupdate:
+    name: autoupdate
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: docker://chinthakagodawita/autoupdate-action:v1
+        env:
+          GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+          DRY_RUN: 'false'
+          PR_FILTER: 'auto_merge'
+          PR_READY_STATE: 'ready_for_review'
+          RETRY_COUNT: "5"
+          RETRY_SLEEP: "300"
+          MERGE_CONFLICT_ACTION: "fail"
+
+      - run: echo 'This command should notify the PR author that there were conflicts he needs to solve'
+        if: ${{ steps.autoupdate.outputs.conflicted }}
